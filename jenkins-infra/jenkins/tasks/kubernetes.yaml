@@ -24,3 +24,19 @@
     command:
       cmd: aws eks update-kubeconfig --region us-east-1 --name ed-eks-01
     become: false
+    
+  - name: Copy yaml files 
+    ansible.builtin.copy:
+      src: '{{item}}'
+      dest: '/home/ubuntu'
+    loop:
+      "{{files}}"
+          
+  - name: Create resources
+    remote_user: ubuntu
+    become: false
+    kubernetes.core.k8s:
+      state: present
+      src: '{{item}}'
+    loop:
+     "{{files}}"

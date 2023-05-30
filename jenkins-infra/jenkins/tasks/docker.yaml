@@ -18,11 +18,3 @@
       name: docker-ce
       state: latest
       update_cache: true
-
-
-  - name: Copy yaml files 
-    ansible.builtin.copy:
-      src: '{{item}}'
-      dest: '/home/ubuntu'
-    loop:
-      "{{files}}"
