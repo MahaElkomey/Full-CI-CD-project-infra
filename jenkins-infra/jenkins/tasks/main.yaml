@@ -1,0 +1,11 @@
+- name: Include aws
+  include_tasks: aws.yaml
+
+- name: Include kubernetes
+  include_tasks: kubernetes.yaml
+  
+  - name: Include docker
+  include_tasks: docker.yaml
+  
+  - name: Include slave
+  include_tasks: slave.yaml

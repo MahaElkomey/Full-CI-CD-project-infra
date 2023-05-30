@@ -1,0 +1,26 @@
+#install kubectl
+
+  - name: install-python3
+    package:
+      name: python3-pip
+      state: present
+      
+  - name: Install kubernetes
+    ansible.builtin.pip:
+      name: kubernetes
+    
+  - name: get kubectl url
+    ansible.builtin.command: curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.23.17/2023-05-11/bin/linux/amd64/kubectl
+    
+  - name: change mode
+    ansible.builtin.command: chmod +x kubectl
+    
+  - name: move kubectl file
+    ansible.builtin.command: mv kubectl /usr/local/bin/  
+    
+
+  - name: Update AWS EKS kubeconfig
+    remote_user: ubuntu
+    command:
+      cmd: aws eks update-kubeconfig --region us-east-1 --name ed-eks-01
+    become: false

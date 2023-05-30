@@ -1,0 +1,4 @@
+- name: jenkins-rule
+  hosts: all
+  roles:
+    - jenkins
