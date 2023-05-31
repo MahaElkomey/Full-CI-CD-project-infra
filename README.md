@@ -28,7 +28,7 @@
 - Configure Jenkins to use bastion host as a slave
 - Create jenkins pipline to Build the appplication Dockerfile and push it to dockerhub repository, then Deploy the application in kubernetes cluster as deployment using this aploaded image
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Please check the web application (microo) files in the folowing repo:
+Please check the web application (microo) files in the following repo:
 ``` sh
 https://github.com/MahaElomey/ITI-project-app.git
 ```
