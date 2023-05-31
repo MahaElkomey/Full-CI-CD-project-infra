@@ -65,7 +65,7 @@ ansible-playbook -i inventory jenkins.yaml
 
 ![image](https://github.com/MahaElomey/Full-CI-CD-ITI-project-infra/assets/47718954/3d60b2bb-aea8-4012-a152-093a7e11997e)
 
-8- finalllllly we dploy our application (microo)
+8- finalllllly we deploy our application (microo)
 
 
 
